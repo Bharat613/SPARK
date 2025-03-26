@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    
+}
+
+.main {
+    min-height: 100vh;
+    height : auto;
+    position: relative;
+    width: 100%;
+    background: #020202;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center; 
+    
+    
+}
+.container {
+    position: relative;
+    /* display: inline-block; Ensures the button stays within the image container */
+    align-items: center;
+    justify-items: center;
+    border-radius : 180px;
+    width: 400px !important;
+    height: 350px !important;
+    overflow:hidden;
+    
+
+}
+.main  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    /* background: rgb(202 253 255 / 50%); */
+   
+    top : 34%;
+    left : 40%;
+    position : absolute;
+}
+.talk{
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    position : absolute;
+}
+
+
+.main .input .talk i {
+    font-size: 30px;
+    color: #f5f5f5;
+}
+.image{
+    width : 100% !important;
+    height: 100%;
+    object-fit:cover;
+ 
+}
+#calendar{
+    height: auto;
+    width: auto;
+}
+
+#text-display {
+    border: 2px solid rgb(31, 28, 28);
+    width: 600px;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;              
+    justify-content: center;     
+    align-items: center;         
+    text-align: justify;  
+    color : rgb(8, 8, 8);  
+    padding : 10px; 
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    font-size : 15px;    
+    margin-bottom : 100px;
+    position : relative;
+    background-color: #ddd;
+    font-family:monospace;
+}
+
+#main-input{
+display: flex;
+
+}
+
+/* hambarger */
+.hamburger-icon {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 100;
+   
+}
+
+.hamburger-icon .bar {
+    width: 25px;
+    height: 3.5px;
+    margin: 3.5px 0;
+    opacity : 0.9;
+    background-color: rgb(241, 234, 234);
+    border-radius: 3px;
+    
+
+}
+
+.questions-container {
+    position: fixed;
+    top: 60px;
+    right: -300px; /* Hidden initially */
+    width: 250px;
+    height: 83%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    border-radius: 5px;
+    
+}
+
+.questions-container.open {
+    right: 0;
+    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+.manual {
+    position: fixed;
+    bottom: 30px;
+    right: 0px;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    overflow: hidden;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    
+}
+ul {
+    max-height: 500px; /* Set the max-height for the ul element */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Optional: Adds padding to avoid overlap with scrollbar */
+    margin: 0; /* Optional: Ensures there's no extra margin */
+    list-style-type: none; /* Optional: Remove default list bullets */
+    padding-left: 0; /* Optional: Remove default left padding of the list */
+}
+.hidden {
+    display: none;
+    
+}
+
+#manual-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    transform: translateX(-50%);
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+#close-manual {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+
+/* Default styles for larger screens (already in your CSS) */
+
+/* Media query for smartphones */
+@media only screen and (max-width:968px) {
+    
+    .main {
+        text-align: center;
+        padding: 20px;
+        width : 100%;
+        
+    }
+.container{
+    width : 330px;
+    position : relative;
+}
+
+    .image{
+        width : 330px;
+        
+    }
+
+    .main .input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+        width : 100px;
+        height : 100px;
+    }
+
+    .input .talk {
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+        position : absolute;
+        top : 15%;
+        left : 14%;
+       
+    }
+    .talk i {
+        font-size: 22px !important; /* Set the icon size here */
+    }
+    
+
+    /* #text-display {
+        width: 100%;
+        font-size: 13px;
+        padding: 10px;
+        word-wrap: break-word;
+        text-align: center;
+        
+        white-space: normal;
+        height : auto;
+        overflow: hidden;
+        
+         /* Enables vertical scrolling 
+    
+    } */
+    #text-display {
+        border: 2px solid rgb(31, 28, 28);
+        width: 100% !important;
+        height: auto;
+        margin-top: 30px;
+        border-radius: 10px;
+        display: flex;     
+        line-height: 16px;         
+        justify-content: center;     
+        align-items: center;         
+        text-align: justify;  
+        color : rgb(8, 8, 8);   
+        padding : 10px; 
+          overflow: hidden;
+          overflow-wrap: anywhere;
+        font-size : 10px;    
+        margin-bottom : 100px;
+        position : relative;
+    }
+    
+/* .input{
+    height : 46px !important;
+    border-radius : 10px !important;
+    
+} */
+
+    footer {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .manual {
+        position: fixed;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgb(249, 245, 245);
+        padding: 15px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 400px;
+        height : 80%;
+        overflow: hidden;
+        font-size : 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none;
+        
+    }
+    ul {
+        max-height: 370px; /* Set the max-height for the ul element */
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding-right: 10px; /* Optional: Adds padding to avoid overlap with scrollbar */
+        margin: 0; /* Optional: Ensures there's no extra margin */
+        list-style-type: none; /* Optional: Remove default list bullets */
+        padding-left: 0; /* Optional: Remove default left padding of the list */
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    #manual-btn {
+        position: fixed;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #007BFF;
+        color: white;
+       
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width : 70px;
+        height : 20px;
+        font-size : 11px;
+        padding : 0px;
+
+        
+    }
+    .questions-container{
+        z-index: 1;
+    }
+    #close-manual {
+        background: red;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    
+}
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VEXON - Assistant</title>
+    <!--<link rel="shortcut icon" href="avatar.jpg" type="image/x-icon">-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    
+    <section class="main">
+        <!-- Hamburger Icon -->
+    <div class="hamburger-icon" id="hamburgerIcon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Questions List -->
+    <div class="questions-container" id="questionsContainer">
+        <h4>Questions Asked:</h4>
+        <ul id="questionsList">
+            <!-- Questions will be listed here -->
+        </ul>
+    </div>
+        <!-- <div class="image-container">
+            <div class="image">
+                <img src="Spheres.gif" alt="image"> 
+            </div>
+             <h1 id = "name" style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;">V E X O N</h1>
+             <p style="color:rgb(157, 96, 231);">what's in your mind?</p>
+        </div> -->
+         <!-- <div id = "main-input"> -->
+            
+               <!-- <input type="text" placeholder="Ask anything" id = "text-input"> -->
+                <div class = "container">
+                    <img class = "image" src="Spheres.gif" alt="image">  
+                    <!-- <div class="input">
+                         
+                            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+                        
+                         <h1 class="content"> Click here to speak</h1>             
+                </div> -->
+                </div>
+               
+        <!-- </div> -->
+        
+        <div>
+            <!-- <p style="color:white;font-size: 10px;margin-top:5px;">refresh to Exit</p> -->
+            <input type="text" id="ipInput" placeholder="Enter IP address" style="display:none; padding: 5px; margin: 5px;">
+            <button id="submitIp" style="display:none; padding: 5px;">Submit</button>
+            <p id="textDisplay"></p>
+            
+        </div>
+        
+        <div id = 'text-display'>
+            
+        </div>
+        
+        <button id="manual-btn">Manual</button>
+
+<div id="manual-container" class="manual hidden">
+    <h2>How to Use the Assistant</h2>
+    <p>Speak or type your question, and the assistant will respond. Below are some commands you can use:</p>
+
+    <h3>Basic Commands:</h3>
+    <ul>
+        <li><strong>"Play song song name"</strong></li>
+        <li><strong>"What is evaporation"</strong></li>
+        <li><strong>"Who is Elon Musk?"</strong></li>
+        <li><strong>"Who are Wright brothers?"</strong></li>
+        <li><strong>"images of sunset."</strong></li>
+        <li><strong>calculate "12 + 5 + 10/2 ->[ +,-,/,%,*,^]"</strong></li>
+        <li><strong>"Weather in New York?"</strong></li>
+        <li><strong>"define evaporation?"</strong></li>
+        <li><strong>"Internet Speed"</strong></li>
+        <li><strong>"my location"</strong></li>
+        <li><strong>"give me location of ip address"</strong> - it will open input box then enter ip adress it will give location</li>
+        <li><strong>"current weather"</strong></li>
+        <li><strong>"where is TajMahal?"</strong></li>
+        <li><strong>"Full form of CPU ?"</strong></li>
+        <li><strong>"Distance between Delhi and Mumbai?"</strong></li>
+        <li><strong>"Tell me a fact"</strong></li>
+        <li><strong>"Open LinkedIn"</strong></li>
+        <li><strong>"Open camera"</strong></li>
+        <li><strong>"Spelling of any word?"</strong></li>
+        <li><strong>"Introduce yourself"</strong></li>
+        <li><strong>"Today Date"</strong></li>
+        <li><strong>"Current time"</strong></li>
+        <li><strong>"Today Day"</strong></li>
+        <li><strong>"if i born on  " dd - january(your month) - year"  calculate my age "</strong></li>
+        <li><strong>"If my weight is 30,  then what is my approxiamate height?"</strong></li>
+
+
+        
+    </ul>
+
+    <button id="close-manual">Close</button>
+</div>
+
+    </section>
+    <footer style="background-color: #222; color: white; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0;">
+        <p style="font-size:10px;">Developed by <strong>SHIVA</strong> | © 2025 All Rights Reserved</p>
+    </footer>
+    
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
